@@ -1,0 +1,50 @@
+/* Sidebar.css */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Menü başlangıçta sayfanın sol tarafından gizli */
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease;
+    z-index: 1000; /* Header'in üzerinde olmasını sağlar */
+}
+
+.sidebar.open {
+    left: 0; /* Menü açıldığında sayfanın soluna doğru kaydır */
+}
+
+.menu-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1100; /* Menü butonunun header'dan üstte olmasını sağlar */
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.menu-items {
+    position: absolute;
+    top: 80px; /* Menü öğelerinin menü butonundan biraz aşağıda olacağı yeri belirler */
+    left: 15px; /* Menü öğelerinin sol kenarındaki mesafeyi belirler */
+    width: 200px; /* Menü öğelerinin genişliğini belirler (250px - padding) */
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu-items a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 10px 0;
+}
+
+.menu-items a:hover {
+    background-color: #f0f0f0;
+}
